@@ -12,7 +12,7 @@ public class GameControll : MonoBehaviour
     void Start()
     {
         m_UI = FindObjectOfType<UI>();
-        m_UI.textScore("Coin:" + m_score);
+        m_UI.textScore(""+ m_score);
     }
 
     // Update is called once per frame
@@ -25,13 +25,13 @@ public class GameControll : MonoBehaviour
     {
 
         m_score = 0;
-        m_UI.textScore("Coin:" + m_score);
+        m_UI.textScore("" + m_score);
 
     }
 
     public void incrementSscore()
     {
         m_score++;
-        m_UI.textScore("Coin:" + m_score);
+        m_UI.textScore("" + m_score);
     }
 }
