@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Animations;
+using UnityEngine.EventSystems;
 
 public class TankController : intruct
 {
@@ -22,6 +23,8 @@ public class TankController : intruct
     public GameObject track;
     Animator animator;
     public GameObject health;
+    public GameObject PauseGame;
+    public GameObject option1pause;
 
     private void Start()
     {
@@ -91,6 +94,13 @@ public class TankController : intruct
                 animator.SetFloat("moveRight", 0);
                 animator.SetFloat("moveUp", 1);
                 animator.SetFloat("moveDown", 0);
+            }
+            else if(Input.GetKey(KeyCode.P))
+            {
+                Time.timeScale = 0;
+                PauseGame.SetActive(true);
+                EventSystem.current.SetSelectedGameObject(null);
+                EventSystem.current.SetSelectedGameObject(option1pause);
             }
 
             if (!GameStatus.isTankCreate)
