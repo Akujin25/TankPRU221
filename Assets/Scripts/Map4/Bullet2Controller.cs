@@ -1,25 +1,20 @@
-﻿using System;
+﻿using Entity;
+using System;
 using System.Collections;
 using System.Collections.Generic;
-using Entity;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
 
-public class BulletController : MonoBehaviour
+public class Bullet2Controller : MonoBehaviour
 {
-    public Bullet Bullet { get; set; }
-
+    public Bullet Bullet2 { get; set; }
     public int MaxRange { get; set; }
 
     private bool isDestroyed = false;
-
-    // Start is called before the first frame update
     private void Start()
     {
     }
-
-    // Update is called once per frame
     private void Update()
     {
         DestroyAfterRange();
@@ -33,12 +28,11 @@ public class BulletController : MonoBehaviour
         isDestroyed = true;
         gameObject.SetActive(false);
     }
-
     private void DestroyAfterRange()
     {
         var currentPos = gameObject.transform.position;
-        var initPos = Bullet.InitialPosition;
-        var direction = Bullet.Direction;
+        var initPos = Bullet2.InitialPosition;
+        var direction = Bullet2.Direction;
 
         var distance = Vector3.Distance(initPos, currentPos);
         if (distance >= MaxRange)
@@ -86,18 +80,18 @@ public class BulletController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        /*if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player")
+        {
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+            SceneManager.LoadScene(0);
+        }
+
+        /*if (collision.gameObject.tag == "Play2")
         {
             Destroy(collision.gameObject);
             Destroy(gameObject);
         }*/
-
-        if (collision.gameObject.tag == "Play2")
-        {
-            Destroy(collision.gameObject);
-            Destroy(gameObject);
-            SceneManager.LoadScene(7);
-        }
     }
 
 

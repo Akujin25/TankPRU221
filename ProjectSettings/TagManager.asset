@@ -21,6 +21,7 @@ TagManager:
   - Water
   - Track
   - Play2
+  - bullet2
   layers:
   - Default
   - TransparentFX
