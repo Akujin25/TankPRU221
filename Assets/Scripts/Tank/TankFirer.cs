@@ -2,7 +2,7 @@ using System;
 using Entity;
 using UnityEngine;
 
-namespace DefaultNamespace
+ namespace DefaultNamespace
 {
     public class TankFirer : MonoBehaviour
     {

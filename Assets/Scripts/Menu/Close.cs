@@ -14,4 +14,12 @@ public class Close : MonoBehaviour
         // Choose a new selected object
         EventSystem.current.SetSelectedGameObject(close);
     }
+    public void PauseGame()
+    {
+        Time.timeScale = 0;
+    }
+    public void ResumeGame()
+    {
+        Time.timeScale = 1;
+    }
 }
