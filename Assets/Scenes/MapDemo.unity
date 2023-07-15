@@ -318,9 +318,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29f591c3cd6fa624aa3cafa6f51f7f90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  intructmenu: {fileID: 0}
+  menu: {fileID: 0}
+  option: {fileID: 0}
   tree: {fileID: 4681176130214425235, guid: 01c0be007553a6d49a683fa9d6c2bb87, type: 3}
   Block: {fileID: 4474635290423273523, guid: cfabfd0bb59603549abc35207efd9d16, type: 3}
   Rock: {fileID: 7652058910784709600, guid: 58d38f66cdcdaeb4f9ff864c1b5a60f2, type: 3}
+  water: {fileID: 0}
 --- !u!1001 &1348531006
 PrefabInstance:
   m_ObjectHideFlags: 0

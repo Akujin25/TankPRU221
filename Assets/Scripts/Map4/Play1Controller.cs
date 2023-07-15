@@ -32,8 +32,6 @@ public class Play1Controller : intruct
         {
             Name = "Default",
             Direction = Direction.Down,
-            Hp = 10,
-            Point = 0,
             Position = new Vector3(7.68f, -4.31f, 0),
             Guid = GUID.Generate()
         };
@@ -128,20 +126,12 @@ public class Play1Controller : intruct
         GetComponent<TankFirer>().Fire(b);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    /*private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "play2")
+        if (collision.gameObject.tag == "Play2")
         {
-            _tank.Hp -= 2;
-
-            if (_tank.Hp == 0)
-            {
-                Destroy(gameObject);
-                //intruct.GameStatus.isGameRunning = false;
-                health.SetActive(false);
-                Summary.SetActive(true);
-                Time.timeScale = 0;
-            }
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
         }
-    }
+    }*/
 }
