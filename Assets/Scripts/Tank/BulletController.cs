@@ -92,6 +92,12 @@ public class BulletController : MonoBehaviour
             Destroy(gameObject);
         }*/
 
+        /*if (collision.gameObject.tag == "king")
+        {
+            Destroy(collision.gameObject);
+            Destroy(gameObject);           
+        }*/
+
         if (collision.gameObject.tag == "Play2")
         {
             Destroy(collision.gameObject);

@@ -84,7 +84,7 @@ public class Bullet2Controller : MonoBehaviour
         {
             Destroy(collision.gameObject);
             Destroy(gameObject);
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(8);
         }
 
         /*if (collision.gameObject.tag == "Play2")

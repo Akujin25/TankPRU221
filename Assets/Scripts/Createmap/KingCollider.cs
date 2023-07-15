@@ -11,7 +11,7 @@ public class KingCollider : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "bulletEnemy")
+        if (collision.gameObject.tag == "bulletEnemy"  || collision.gameObject.tag == "bullet")
         {
             a -= 1;
 
