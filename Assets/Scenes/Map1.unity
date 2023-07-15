@@ -379,7 +379,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: ef930833b17ba4a3d982e128e1f176bc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -771,6 +771,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61b0f03e97f3c4b43aa6126ec06bb0cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  map: 0
 --- !u!1 &217147363
 GameObject:
   m_ObjectHideFlags: 0
@@ -1693,6 +1694,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61b0f03e97f3c4b43aa6126ec06bb0cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  map: 0
 --- !u!1 &507704461
 GameObject:
   m_ObjectHideFlags: 0
@@ -1904,7 +1906,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -10
+  m_SortingOrder: 2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -5272,7 +5274,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 548573455}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.8, y: 2.3, z: 0}
+  m_LocalPosition: {x: 3.68, y: 2.08, z: 0}
   m_LocalScale: {x: 0.8843, y: 0.919, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7347,8 +7349,8 @@ Tilemap:
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: -32, y: -21, z: 0}
-  m_Size: {x: 112, y: 41, z: 1}
+  m_Origin: {x: 55, y: -3, z: 0}
+  m_Size: {x: 25, y: 19, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -7619,7 +7621,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 928428896}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.07, y: 2.1, z: 0}
+  m_LocalPosition: {x: -4.64, y: 2.08, z: 0}
   m_LocalScale: {x: 0.8843, y: 0.919, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16425,7 +16427,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1286063353}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.77, y: -1.39, z: 0}
+  m_LocalPosition: {x: 1.12, y: -1.12, z: 0}
   m_LocalScale: {x: 0.8843, y: 0.919, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17752,6 +17754,7 @@ MonoBehaviour:
   health: {fileID: 0}
   PauseGame: {fileID: 0}
   option1pause: {fileID: 0}
+  close: {fileID: 0}
   count: {fileID: 870255626}
   score: {fileID: 1294173120}
 --- !u!114 &1815167825
@@ -17766,6 +17769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61b0f03e97f3c4b43aa6126ec06bb0cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  map: 0
 --- !u!1 &1837354578
 GameObject:
   m_ObjectHideFlags: 0
@@ -18583,6 +18587,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 658675346, guid: a77168ab521034ef8b7b80b9dd64708e, type: 3}
+      propertyPath: close
+      value: 
+      objectReference: {fileID: 1535659240}
+    - target: {fileID: 658675346, guid: a77168ab521034ef8b7b80b9dd64708e, type: 3}
       propertyPath: camera
       value: 
       objectReference: {fileID: 0}
@@ -18755,7 +18763,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 10
-  currentHealth: 0
+  currentHealth: 10
   healthBar: {fileID: 1659137817}
 --- !u!114 &2093293065 stripped
 MonoBehaviour:
@@ -18779,6 +18787,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce52482f72ca442e6b3880f73fb4f360, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2093293068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2093293053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61b0f03e97f3c4b43aa6126ec06bb0cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  map: 0
 --- !u!1 &2127492618
 GameObject:
   m_ObjectHideFlags: 0

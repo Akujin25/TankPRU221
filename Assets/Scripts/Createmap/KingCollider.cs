@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class KingCollider : MonoBehaviour
 {
     int a = 3;
-    public GameObject Summary;
+    public GameObject Summary, close;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -21,6 +22,9 @@ public class KingCollider : MonoBehaviour
                 Destroy(gameObject);
                 Destroy(GameObject.FindGameObjectWithTag("Player"));
                 Time.timeScale = 0;
+                EventSystem.current.SetSelectedGameObject(null);
+                // Choose a new selected object
+                EventSystem.current.SetSelectedGameObject(close);
             }
         }
     }

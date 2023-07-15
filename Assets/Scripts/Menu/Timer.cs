@@ -19,9 +19,9 @@ public class Timer : MonoBehaviour
     private void Being(int second)
     {
         WaitSec = second;
-        StartCoroutine(FixedUpdate());
+        StartCoroutine(fixedUpdate());
     }
-    private IEnumerator FixedUpdate()
+    private IEnumerator fixedUpdate()
     {
         while (WaitSec > 0)
         {

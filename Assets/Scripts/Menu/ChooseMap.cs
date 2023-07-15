@@ -6,12 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class ChooseMap : MonoBehaviour
 {
+    public int map = 0;
+        
     public void chooseCreateMap()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     public void chooseMap1()
     {
+        map = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
     }
     public void chooseMap2()
@@ -33,6 +36,7 @@ public class ChooseMap : MonoBehaviour
     }
     public void backFromMap1()
     {
+        map = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
         Time.timeScale = 1.0f;
     }

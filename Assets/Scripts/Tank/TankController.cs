@@ -24,13 +24,15 @@ public class TankController : intruct
     Animator animator;
     public GameObject health;
     public GameObject PauseGame;
-    public GameObject option1pause;
+    public GameObject option1pause, close;
 
     private void Start()
     {
         track = GameObject.FindGameObjectWithTag("Track");
 
         animator = GetComponent<Animator>();
+
+
         _tank = new Tank
         {
             Name = "Default",
@@ -151,6 +153,9 @@ public class TankController : intruct
                 health.SetActive(false);
                 Summary.SetActive(true);
                 Time.timeScale = 0;
+                EventSystem.current.SetSelectedGameObject(null);
+                // Choose a new selected object
+                EventSystem.current.SetSelectedGameObject(close);
             }
         }
     }

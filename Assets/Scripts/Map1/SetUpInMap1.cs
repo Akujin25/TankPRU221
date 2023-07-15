@@ -17,6 +17,9 @@ public class SetUpInMap1 : MonoBehaviour
 
     public void Start()
     {
+        ChooseMap chooseMap = FindObjectOfType<ChooseMap>();
+
+        chooseMap.map = 1;
         tank = GameObject.FindGameObjectWithTag("Player");
 
         tank.transform.position = new Vector3(1.6f, -4.6f, 0);
@@ -25,9 +28,9 @@ public class SetUpInMap1 : MonoBehaviour
 
         UndyingAni.SetActive(true);
 
-        Instantiate(enemy, new Vector3(-3f, 4.3f, 0), Quaternion.identity);
-        Instantiate(enemy, new Vector3(-0.01f, 4.3f, 0), Quaternion.identity);
-        Instantiate(enemy, new Vector3(3.8f, 2.3f, 0), Quaternion.identity);
+        Instantiate(enemy, new Vector3(-4.8f, 2.24f, 0), Quaternion.identity);
+        Instantiate(enemy, new Vector3(0.96f, -1.28f, 0), Quaternion.identity);
+        Instantiate(enemy, new Vector3(3.84f, 2.24f, 0), Quaternion.identity);
         a = 0;
 
         undying.isPlaying = true;
@@ -49,15 +52,15 @@ public class SetUpInMap1 : MonoBehaviour
 
                 if (randomPosition == 0)
                 {
-                    Instantiate(enemy, new Vector3(-3f, 4.3f, 0), Quaternion.identity);
+                    Instantiate(enemy, new Vector3(-4.8f, 2.24f, 0), Quaternion.identity);
                 }
                 else if (randomPosition == 1)
                 {
-                    Instantiate(enemy, new Vector3(-0.01f, 4.3f, 0), Quaternion.identity);
+                    Instantiate(enemy, new Vector3(0.96f, -1.28f, 0), Quaternion.identity);
                 }
                 else if (randomPosition == 2)
                 {
-                    Instantiate(enemy, new Vector3(3.8f, 2.3f, 0), Quaternion.identity);
+                    Instantiate(enemy, new Vector3(3.84f, 2.24f, 0), Quaternion.identity);
                 }
             }
         }

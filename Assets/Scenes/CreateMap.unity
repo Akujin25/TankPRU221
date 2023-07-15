@@ -1242,6 +1242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Summary: {fileID: 1373181694}
+  close: {fileID: 0}
 --- !u!1 &278623914
 GameObject:
   m_ObjectHideFlags: 0
@@ -1369,6 +1370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61b0f03e97f3c4b43aa6126ec06bb0cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  map: 0
 --- !u!114 &278623921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2178,6 +2180,70 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8476326214080023527, guid: cfabfd0bb59603549abc35207efd9d16, type: 3}
   m_PrefabInstance: {fileID: 623330783}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &625585678
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 625585679}
+  - component: {fileID: 625585681}
+  - component: {fileID: 625585680}
+  m_Layer: 0
+  m_Name: TrackMarks
+  m_TagString: Track
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &625585679
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 625585678}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.6, y: -4.6, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1057297744}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &625585680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 625585678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c90ae8463654e24e855fa6d48ccdb5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trackDistance: 0.2
+  trackPrefab: {fileID: 937913696600022804, guid: 8d2deb52544724e498c8706c0bcf2df6, type: 3}
+  objectPoolSize: 8
+--- !u!114 &625585681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 625585678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d31baeff85f9d4a4fa9250deb796406a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToPool: {fileID: 0}
+  poolSize: 8
+  spawnedObjectsParent: {fileID: 0}
+  alwaysDestroy: 0
 --- !u!1 &785938766
 GameObject:
   m_ObjectHideFlags: 0
@@ -2943,6 +3009,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 658675346, guid: a77168ab521034ef8b7b80b9dd64708e, type: 3}
+      propertyPath: close
+      value: 
+      objectReference: {fileID: 1538511508}
+    - target: {fileID: 658675346, guid: a77168ab521034ef8b7b80b9dd64708e, type: 3}
+      propertyPath: track
+      value: 
+      objectReference: {fileID: 625585678}
+    - target: {fileID: 658675346, guid: a77168ab521034ef8b7b80b9dd64708e, type: 3}
       propertyPath: camera
       value: 
       objectReference: {fileID: 278623914}
@@ -3120,7 +3194,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
 --- !u!95 &1057297745
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3137,7 +3211,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!114 &1057297752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3151,6 +3225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Summary: {fileID: 1373181694}
+  close: {fileID: 1538511508}
 --- !u!1001 &1058039119
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3917,6 +3992,11 @@ MonoBehaviour:
   tankLeft: {fileID: 0}
   tankRight: {fileID: 0}
   Summary: {fileID: 0}
+  track: {fileID: 0}
+  health: {fileID: 0}
+  PauseGame: {fileID: 0}
+  option1pause: {fileID: 0}
+  close: {fileID: 0}
   count: {fileID: 1973839133}
   score: {fileID: 1282746173}
 --- !u!114 &1373181697
@@ -5580,7 +5660,7 @@ Transform:
   m_Children:
   - {fileID: 1995662717}
   m_Father: {fileID: 1057297744}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1924820106
 MonoBehaviour:
@@ -5627,6 +5707,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -5779,7 +5860,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1995662719
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -5796,7 +5877,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!212 &1995662720
 SpriteRenderer:
   m_ObjectHideFlags: 0

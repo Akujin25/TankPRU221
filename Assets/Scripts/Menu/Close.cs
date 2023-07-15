@@ -22,4 +22,10 @@ public class Close : MonoBehaviour
     {
         Time.timeScale = 1;
     }
+
+    public void setMap()
+    {
+        ChooseMap chooseMap = FindObjectOfType<ChooseMap>();
+        chooseMap.map = 0;
+    }
 }
