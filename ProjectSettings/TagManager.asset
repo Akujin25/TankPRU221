@@ -21,6 +21,9 @@ TagManager:
   - Water
   - Track
   - Play2
+  - bullet2
+  - dan
+  - BaseEnemy
   layers:
   - Default
   - TransparentFX

@@ -24,9 +24,12 @@ public class EnemySpawn : MonoBehaviour
     {
 
         Vector2 spawnPos = GameObject.Find("BaseEnemy").transform.position;
+        Vector2 spawnPos2 = GameObject.Find("BaseEnemy1").transform.position;
         spawnPos += Random.insideUnitCircle.normalized * spawnRadius;
-
+        spawnPos2 += Random.insideUnitCircle.normalized * spawnRadius;
         Instantiate(enemies[Random.Range(0, enemies.Length)], spawnPos, Quaternion.identity);
+     
+        Instantiate(enemies[Random.Range(0, enemies.Length)], spawnPos2, Quaternion.identity);
         yield return new WaitForSeconds(time);
         StartCoroutine(SpawnAnEnemy());
     }

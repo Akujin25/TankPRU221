@@ -121,6 +121,11 @@ public class BulletController : MonoBehaviour
 
                 break;
             }
+            else if ( collider.CompareTag("wall"))
+            {
+                // Va chạm với "WallSteel", viên đạn biến mất
+                Destroy(gameObject);
+            }
             else if (collider.CompareTag("Tree"))
             {
                 // Va chạm với "WaterTree", viên đạn đi xuyên qua

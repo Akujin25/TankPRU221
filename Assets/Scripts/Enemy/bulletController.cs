@@ -87,7 +87,7 @@ public class bulletController : MonoBehaviour
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 0.1f);
         foreach (Collider2D collider in colliders)
         {
-            if (collider.CompareTag("WallSteel"))
+            if (collider.CompareTag("WallSteel")|| collider.CompareTag("wall"))
             {
                 // Va chạm với "WallSteel", viên đạn biến mất
                 Destroy(gameObject);
