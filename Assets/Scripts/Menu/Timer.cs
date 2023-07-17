@@ -60,6 +60,7 @@ public class Timer : MonoBehaviour
     {
         // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 0f;
+
         if (Score > PlayerPrefs.GetInt("HighScore"))
         {
             PlayerPrefs.SetInt("HighScore", Score);
