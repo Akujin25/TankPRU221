@@ -160,6 +160,7 @@ public class TankConMap3 : intruct
                 health.SetActive(false);
                 Summary.SetActive(true);
                 Time.timeScale = 0;
+                GameStatus.isTankPlay = false;
             }
         }
         if (collision.gameObject.tag == "dan")

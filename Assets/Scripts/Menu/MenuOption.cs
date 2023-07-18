@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,7 +12,6 @@ public class MenuOption : MonoBehaviour
     public void MenuGame()
     {
         optionGame.SetActive(true);
-
         //Clear Object selected
         EventSystem.current.SetSelectedGameObject(null);
         // Choose a new selected object

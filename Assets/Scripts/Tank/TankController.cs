@@ -57,7 +57,7 @@ public class TankController : intruct
     // Update is called once per frame
     private void Update()
     {
-        if (setUpMap.undying.isPlaying || GameStatus.isTankCreate)
+        if ((setUpMap.undying.isPlaying || GameStatus.isTankCreate) && GameStatus.isTankPlay == true)
         {
             if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
             {
@@ -152,6 +152,7 @@ public class TankController : intruct
                 //intruct.GameStatus.isGameRunning = false;
                 health.SetActive(false);
                 Summary.SetActive(true);
+                GameStatus.isTankPlay = false;
                 Time.timeScale = 0;
                 EventSystem.current.SetSelectedGameObject(null);
                 // Choose a new selected object

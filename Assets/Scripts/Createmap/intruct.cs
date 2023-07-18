@@ -12,6 +12,7 @@ public class intruct : MonoBehaviour
     {
         public static bool isGamePaused = true;
         public static bool isTankCreate = false;
+        public static bool isTankPlay = true;
     }
 
     void Start()

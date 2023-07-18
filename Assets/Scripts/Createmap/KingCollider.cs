@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using static intruct;
 
 public class KingCollider : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class KingCollider : MonoBehaviour
             {
                 Summary.SetActive(true);
                 //intruct.GameStatus.isGameRunning = false;
+                GameStatus.isTankPlay = false;
                 Destroy(gameObject);
                 Destroy(GameObject.FindGameObjectWithTag("Player"));
                 Time.timeScale = 0;

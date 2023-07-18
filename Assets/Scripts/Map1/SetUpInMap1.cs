@@ -28,9 +28,9 @@ public class SetUpInMap1 : MonoBehaviour
 
         UndyingAni.SetActive(true);
 
-        Instantiate(enemy, new Vector3(-4.8f, 2.24f, 0), Quaternion.identity);
-        Instantiate(enemy, new Vector3(0.96f, -1.28f, 0), Quaternion.identity);
-        Instantiate(enemy, new Vector3(3.84f, 2.24f, 0), Quaternion.identity);
+        Instantiate(enemy, new Vector3(-4.8f, 2.08f, 0), Quaternion.identity);
+        Instantiate(enemy, new Vector3(1.28f, -1.12f, 0), Quaternion.identity);
+        Instantiate(enemy, new Vector3(3.84f, 2.08f, 0), Quaternion.identity);
         a = 0;
 
         undying.isPlaying = true;
@@ -52,15 +52,15 @@ public class SetUpInMap1 : MonoBehaviour
 
                 if (randomPosition == 0)
                 {
-                    Instantiate(enemy, new Vector3(-4.8f, 2.24f, 0), Quaternion.identity);
+                    Instantiate(enemy, new Vector3(-4.8f, 2.08f, 0), Quaternion.identity);
                 }
                 else if (randomPosition == 1)
                 {
-                    Instantiate(enemy, new Vector3(0.96f, -1.28f, 0), Quaternion.identity);
+                    Instantiate(enemy, new Vector3(1.28f, -1.12f, 0), Quaternion.identity);
                 }
                 else if (randomPosition == 2)
                 {
-                    Instantiate(enemy, new Vector3(3.84f, 2.24f, 0), Quaternion.identity);
+                    Instantiate(enemy, new Vector3(3.84f, 2.08f, 0), Quaternion.identity);
                 }
             }
         }
