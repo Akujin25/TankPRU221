@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ThuyTinhWin.unity
     guid: f2dfa1126bbbb0f458ce14f1b28a2794
+  - enabled: 1
+    path: Assets/Scenes/DrawWar.unity
+    guid: 4471a4f56cf1c204a92dd5d59868b733
   m_configObjects: {}

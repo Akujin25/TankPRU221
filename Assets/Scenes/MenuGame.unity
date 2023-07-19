@@ -2527,7 +2527,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1215472192}
         m_TargetAssemblyTypeName: ChooseMap, Assembly-CSharp
-        m_MethodName: chooseMap2
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
