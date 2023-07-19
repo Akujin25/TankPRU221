@@ -26,6 +26,8 @@ public class TankController : intruct
     public GameObject PauseGame;
     public GameObject option1pause, close;
 
+    [SerializeField] private AudioSource ShotSoundEffect;
+
     private void Start()
     {
         track = GameObject.FindGameObjectWithTag("Track");
@@ -109,6 +111,7 @@ public class TankController : intruct
             {
                 if (Input.GetKey(KeyCode.Space))
                 {
+                    ShotSoundEffect.Play();
                     Fire();
                 }
             }

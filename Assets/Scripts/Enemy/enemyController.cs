@@ -27,6 +27,9 @@ public class enemyController : MonoBehaviour
 
     float timeShotter = 3f;
 
+    [SerializeField] private AudioSource ShotEnemySoundEffect;
+
+
     private void Start()
     {
         animator = GetComponent<Animator>();
@@ -111,6 +114,7 @@ public class enemyController : MonoBehaviour
         if (timeShotter > 3)
         {
             timeShotter = 0;
+            ShotEnemySoundEffect.Play();
             Fire();
         }
     }

@@ -14,6 +14,8 @@ public class BulletController : MonoBehaviour
 
     private bool isDestroyed = false;
 
+    [SerializeField] private AudioSource blockCollisionSoundEffect;
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -124,6 +126,7 @@ public class BulletController : MonoBehaviour
             else if ( collider.CompareTag("wall"))
             {
                 // Va chạm với "WallSteel", viên đạn biến mất
+                blockCollisionSoundEffect.Play();
                 Destroy(gameObject);
             }
             else if (collider.CompareTag("Tree"))
@@ -144,6 +147,7 @@ public class BulletController : MonoBehaviour
                     {
                         // Phá hủy WallBrick
                         tilemap.SetTile(cellPosition, null);
+                        blockCollisionSoundEffect.Play();
 
                         // Phá hủy viên đạn
                         Destroy(gameObject);

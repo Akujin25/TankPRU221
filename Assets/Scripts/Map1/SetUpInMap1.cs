@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static intruct;
 
 public class SetUpInMap1 : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class SetUpInMap1 : MonoBehaviour
     float countTime = 0, countTime1 = 0;
     int randomPosition, a = 1, quantity = 3;
     GameObject[] enemyCount;
+    [SerializeField] private AudioSource StartEffect;
+
 
     public static class undying
     {
@@ -18,10 +21,10 @@ public class SetUpInMap1 : MonoBehaviour
     public void Start()
     {
         ChooseMap chooseMap = FindObjectOfType<ChooseMap>();
-
+        GameStatus.isTankPlay = true;
         chooseMap.map = 1;
         tank = GameObject.FindGameObjectWithTag("Player");
-
+        
         tank.transform.position = new Vector3(1.6f, -4.6f, 0);
 
         Time.timeScale = 1;
@@ -34,6 +37,7 @@ public class SetUpInMap1 : MonoBehaviour
         a = 0;
 
         undying.isPlaying = true;
+        StartEffect.Play();
     }
 
     private void Update()
