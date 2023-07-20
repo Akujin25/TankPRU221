@@ -5,6 +5,7 @@ public class MenuController : MonoBehaviour
 {
     public GameObject[] menuOptions; // Mảng chứa các tùy chọn trong menu
     private int currentIndex = 0;
+    [SerializeField] private AudioSource ChooseSound;
 
     private void Start()
     {
@@ -17,10 +18,13 @@ public class MenuController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
         {
             ChangeSelection(-1); // Di chuyển lên trên
+            ChooseSound.Play();
         }
         else if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
         {
             ChangeSelection(1); // Di chuyển xuống dưới
+            ChooseSound.Play();
+
         }
     }
 

@@ -14,7 +14,6 @@ public class DamageBullet : MonoBehaviour
         healthPlayer = FindObjectOfType<HealthPlayer>();
         ChooseMap chooseMap = FindObjectOfType<ChooseMap>();
         map = chooseMap.map;
-        Debug.Log(map);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

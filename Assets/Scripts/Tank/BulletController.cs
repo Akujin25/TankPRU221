@@ -13,12 +13,15 @@ public class BulletController : MonoBehaviour
     public int MaxRange { get; set; }
 
     private bool isDestroyed = false;
+    int map;
 
     [SerializeField] private AudioSource blockCollisionSoundEffect;
 
     // Start is called before the first frame update
     private void Start()
     {
+        ChooseMap chooseMap = FindObjectOfType<ChooseMap>();
+        map = chooseMap.map;
     }
 
     // Update is called once per frame
@@ -113,7 +116,7 @@ public class BulletController : MonoBehaviour
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 0.1f);
         foreach (Collider2D collider in colliders)
         {
-            if (collider.CompareTag("WallSteel"))
+            if (collider.CompareTag("WallSteel") && map == 4)
             {
                 Vector2 reflectionVector = Vector2.Reflect(transform.right, collider.transform.right);
 
