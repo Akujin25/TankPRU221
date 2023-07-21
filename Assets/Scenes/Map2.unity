@@ -11405,7 +11405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9ab36919dfb65b4a8b56fbeeb6de756, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Summary: {fileID: 0}
+  Summary: {fileID: 1034949124}
   close: {fileID: 0}
 --- !u!212 &1075165380
 SpriteRenderer:
@@ -16466,7 +16466,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1460495496
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -16483,7 +16483,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!212 &1460495497
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17023,7 +17023,7 @@ MonoBehaviour:
   healthBar: {fileID: 1660527761}
 --- !u!95 &1567571392
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -17040,7 +17040,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!82 &1567571393
 AudioSource:
   m_ObjectHideFlags: 0

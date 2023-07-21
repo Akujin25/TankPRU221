@@ -1744,6 +1744,8 @@ GameObject:
   m_Component:
   - component: {fileID: 145742251}
   - component: {fileID: 145742250}
+  - component: {fileID: 145742253}
+  - component: {fileID: 145742254}
   m_Layer: 0
   m_Name: base
   m_TagString: king
@@ -1818,6 +1820,46 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &145742253
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145742249}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.32, y: 0.32}
+    newSize: {x: 0.32, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.32, y: 0.32}
+  m_EdgeRadius: 0
+--- !u!114 &145742254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145742249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9ab36919dfb65b4a8b56fbeeb6de756, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Summary: {fileID: 758460683}
+  close: {fileID: 0}
 --- !u!1 &207595474
 GameObject:
   m_ObjectHideFlags: 0
@@ -1999,7 +2041,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
 --- !u!95 &355723199
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2016,7 +2058,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &355723206 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1072091300885886469, guid: a77168ab521034ef8b7b80b9dd64708e, type: 3}
@@ -7982,7 +8024,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2031831713
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9401,7 +9443,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2131457048
 RectTransform:
   m_ObjectHideFlags: 0

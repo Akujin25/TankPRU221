@@ -116,7 +116,7 @@ public class BulletController : MonoBehaviour
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 0.1f);
         foreach (Collider2D collider in colliders)
         {
-            if (collider.CompareTag("WallSteel") && map == 4)
+            /*if (collider.CompareTag("WallSteel") && map == 4)
             {
                 Vector2 reflectionVector = Vector2.Reflect(transform.right, collider.transform.right);
 
@@ -125,7 +125,39 @@ public class BulletController : MonoBehaviour
                 transform.Rotate(Vector3.forward, 45);
 
                 break;
+            }*/
+
+            /*else if (collider.CompareTag("WallSteel")  && map != 4)
+            {
+                Destroy(gameObject);
+            }*/
+
+
+            if (collider.CompareTag("WallSteel"))
+            {
+                // Lấy reference tới scene hiện tại (nếu bạn chưa có reference này thì hãy thêm vào)
+                Scene currentScene = SceneManager.GetActiveScene();
+                int sceneIndex = currentScene.buildIndex;
+
+                // Kiểm tra xem có đang ở scene 4 hay không
+                if (sceneIndex == 6)
+                {
+                    Vector2 reflectionVector = Vector2.Reflect(transform.right, collider.transform.right);
+
+                    GetComponent<Rigidbody2D>().velocity = reflectionVector.normalized * 2;
+
+                    transform.Rotate(Vector3.forward, 45);
+
+                    // Bỏ qua việc destroy objects ở Scene 4
+                    return;
+                }
+                Destroy(gameObject);
             }
+
+            // Tiếp tục phần còn lại của code để destroy objects ở các scene khác
+            // (Dựa vào đoạn code bạn đã viết, mình giả định phần này có trong code của bạn)
+            
+
             else if ( collider.CompareTag("wall"))
             {
                 // Va chạm với "WallSteel", viên đạn biến mất
